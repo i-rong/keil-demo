@@ -332,7 +332,7 @@
               <MiscControls></MiscControls>
               <Define></Define>
               <Undefine></Undefine>
-              <IncludePath>..\USER;..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include;..\..\..\Utilities;..\..\..\..\GD32F4x_Firmware_Library\CMSIS;..\..\..\..\GD32F4x_Firmware_Library\XLL_4G;..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include</IncludePath>
+              <IncludePath>..\USER;..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include;..\..\..\Utilities;..\..\..\..\GD32F4x_Firmware_Library\CMSIS;..\..\..\..\GD32F4x_Firmware_Library\XLL_4G;..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include;..\Soft_Drive</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>

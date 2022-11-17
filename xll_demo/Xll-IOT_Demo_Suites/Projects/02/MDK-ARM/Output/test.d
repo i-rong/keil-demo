@@ -1,4 +1,5 @@
 .\output\test.o: ..\Soft_Drive\test.c
+.\output\test.o: ..\Soft_Drive\test.h
 .\output\test.o: ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h
 .\output\test.o: ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\core_cm4.h
 .\output\test.o: C:\Keil_518\ARM\ARMCC\Bin\..\include\stdint.h

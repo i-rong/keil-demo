@@ -51,3 +51,4 @@
 .\output\main.o: ..\..\..\..\GD32F4x_Firmware_Library\XLL_4G\stdarg.h
 .\output\main.o: ..\..\..\..\GD32F4x_Firmware_Library\XLL_4G\cJSON.h
 .\output\main.o: C:\Keil_518\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\main.o: ..\Soft_Drive\test.h
