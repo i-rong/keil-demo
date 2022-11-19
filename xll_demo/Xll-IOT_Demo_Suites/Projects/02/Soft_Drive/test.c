@@ -24,7 +24,7 @@ void test1_2() {
 
 void test1_3() {
 	if(gd_eval_key_state_get(USER1_KEY) == RESET) {
-		delay_1ms(10); // 防抖
+		delay_1ms(100); // 防抖
 		if(gd_eval_key_state_get(USER1_KEY) == RESET) {
 			gd_eval_led_toggle(LED1);
 		}
@@ -39,6 +39,82 @@ void test2_1() {
 		if(gpio_input_bit_get(DIP2_GPIO_PORT, DIP2_PIN) == RESET && gpio_input_bit_get(DIP3_GPIO_PORT, DIP3_PIN) == SET) led_off_by_order();
 		if(gpio_input_bit_get(DIP2_GPIO_PORT, DIP2_PIN) == SET && gpio_input_bit_get(DIP3_GPIO_PORT, DIP3_PIN) == SET) led_on_immediately();
 	}
+}
+
+void test2_2() {
+	/*使用按键开关控制LED灯的亮灭*/
+	uint8_t lightKey1Cnt = 0;
+	uint8_t lightKey4Cnt = 0;
+	
+	
+	while(1) {
+			if(gd_eval_key_state_get(USER1_KEY) == RESET && lightKey1Cnt == 0) { // key1 first
+			lightKey1Cnt = 1;
+			led_on_immediately();
+		}
+	
+		if(lightKey1Cnt == 1) {
+			if(gd_eval_key_state_get(USER4_KEY) == RESET && lightKey4Cnt == 0) {
+				lightKey4Cnt = 1;
+				led_off_immediately();
+				gd_eval_led_on(LED1);
+				flashLED2_8();
+			}
+			if(lightKey4Cnt == 1) {
+				while(gd_eval_key_state_get(USER4_KEY) == RESET) {
+					lightKey4Cnt = 2;
+					led_on_immediately();
+				}
+			}
+			led_off_immediately();
+			gd_eval_led_on(LED1);
+			if(lightKey1Cnt == 1 && lightKey4Cnt == 2) {
+				if(gd_eval_key_state_get(USER1_KEY) == RESET) {
+					delay_1ms(50);
+					if(gd_eval_key_state_get(USER1_KEY) == RESET) {
+						gd_eval_led_off(LED1);
+						exit(0);
+					}
+				}
+			}
+		}
+	}
+}
+
+void flashLED2_8() {
+	gd_eval_led_on(LED2);
+	delay_1ms(50);
+	gd_eval_led_off(LED2);
+	delay_1ms(100);
+	gd_eval_led_on(LED3);
+	delay_1ms(50);
+	gd_eval_led_off(LED3);
+	delay_1ms(100);
+	gd_eval_led_on(LED4);
+	delay_1ms(50);
+	gd_eval_led_off(LED4);
+	delay_1ms(100);
+	gd_eval_led_on(LED5);
+	delay_1ms(50);
+	gd_eval_led_off(LED5);
+	delay_1ms(100);
+	gd_eval_led_on(LED6);
+	delay_1ms(50);
+	gd_eval_led_off(LED6);
+	delay_1ms(100);
+	gd_eval_led_on(LED7);
+	delay_1ms(50);
+	gd_eval_led_off(LED7);
+	delay_1ms(100);
+	gd_eval_led_on(LED8);
+	delay_1ms(50);
+	gd_eval_led_off(LED8);
+	delay_1ms(100);
+}
+
+void resetLightKeyCnt() {
+	uint8_t lightKey1Cnt = 0;
+	uint8_t lightKey4Cnt = 0;
 }
 
 void led_on_by_order() {
