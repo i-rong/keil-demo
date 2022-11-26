@@ -51,3 +51,4 @@
 .\output\test.o: ..\..\..\..\GD32F4x_Firmware_Library\XLL_4G\stdarg.h
 .\output\test.o: ..\..\..\..\GD32F4x_Firmware_Library\XLL_4G\cJSON.h
 .\output\test.o: C:\Keil_518\ARM\ARMCC\Bin\..\include\stddef.h
+.\output\test.o: C:\Keil_518\ARM\ARMCC\Bin\..\include\setjmp.h

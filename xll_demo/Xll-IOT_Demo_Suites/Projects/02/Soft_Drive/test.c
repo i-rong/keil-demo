@@ -1,4 +1,7 @@
 #include "test.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <setjmp.h>
 
 void systeminit() {
 	systick_config();
@@ -15,6 +18,7 @@ void systeminit() {
 void test1_1() {
 	gd_eval_led_on(LED1);
 	gd_eval_led_on(LED2);
+	gd_eval_led_on(LED3);
 }
 
 void test1_2() {
@@ -23,10 +27,18 @@ void test1_2() {
 }
 
 void test1_3() {
-	if(gd_eval_key_state_get(USER1_KEY) == RESET) {
-		delay_1ms(100); // ·À¶¶
+	while(1) {
 		if(gd_eval_key_state_get(USER1_KEY) == RESET) {
-			gd_eval_led_toggle(LED1);
+			delay_1ms(100); // ·À¶¶
+			if(gd_eval_key_state_get(USER1_KEY) == RESET) {
+				gd_eval_led_toggle(LED1);
+			}
+		}
+		if(gd_eval_key_state_get(USER4_KEY) == RESET) {
+			delay_1ms(100); // ·À¶¶
+			if(gd_eval_key_state_get(USER4_KEY) == RESET) {
+				gd_eval_led_toggle(LED4);
+			}
 		}
 	}
 }
@@ -48,68 +60,86 @@ void test2_2() {
 	
 	
 	while(1) {
-			if(gd_eval_key_state_get(USER1_KEY) == RESET && lightKey1Cnt == 0) { // key1 first
-			lightKey1Cnt = 1;
-			led_on_immediately();
+		if(gd_eval_key_state_get(USER1_KEY) == RESET) {
+			delay_1ms(50);
+			if(gd_eval_key_state_get(USER1_KEY) == RESET) {
+				if(gd_eval_key_state_get(USER1_KEY) == RESET && lightKey4Cnt == 0 && lightKey1Cnt == 0) {
+					lightKey1Cnt = 1;
+				}
+				if(gd_eval_key_state_get(USER1_KEY) == RESET && lightKey4Cnt == 2) {
+					lightKey1Cnt = 2;
+				}
+				delay_1ms(50);
+			}	
 		}
 	
-		if(lightKey1Cnt == 1) {
-			if(gd_eval_key_state_get(USER4_KEY) == RESET && lightKey4Cnt == 0) {
-				lightKey4Cnt = 1;
-				led_off_immediately();
-				gd_eval_led_on(LED1);
-				flashLED2_8();
-			}
-			if(lightKey4Cnt == 1) {
-				while(gd_eval_key_state_get(USER4_KEY) == RESET) {
-					lightKey4Cnt = 2;
+		if(gd_eval_key_state_get(USER4_KEY) == RESET) {
+			delay_1ms(50);
+			if(gd_eval_key_state_get(USER4_KEY) == RESET) {
+				while(gd_eval_key_state_get(USER4_KEY) == RESET && lightKey1Cnt == 1 && lightKey4Cnt == 1) {
 					led_on_immediately();
 				}
-			}
+				if(lightKey4Cnt == 1) lightKey4Cnt = 2;
+				if(gd_eval_key_state_get(USER4_KEY) == RESET && lightKey4Cnt == 0) lightKey4Cnt = 1; // first
+			}	
+		}
+		
+		if(lightKey1Cnt == 1 && lightKey4Cnt == 0) {
+			led_on_immediately();
+		} else if(lightKey1Cnt == 1 && lightKey4Cnt == 1) {
+			flashLED2_8();
+		} else if(lightKey1Cnt == 1 && lightKey4Cnt == 2) {
 			led_off_immediately();
 			gd_eval_led_on(LED1);
-			if(lightKey1Cnt == 1 && lightKey4Cnt == 2) {
-				if(gd_eval_key_state_get(USER1_KEY) == RESET) {
-					delay_1ms(50);
-					if(gd_eval_key_state_get(USER1_KEY) == RESET) {
-						gd_eval_led_off(LED1);
-						exit(0);
-					}
-				}
-			}
+		} else if(lightKey1Cnt == 2 && lightKey4Cnt == 2) {
+			led_off_immediately();
+			lightKey1Cnt = lightKey4Cnt = 0;
 		}
 	}
 }
+// Ê¹ÓÃ°´¼ü2ÖÐ¶Ï¿ØÖÆLED3ÁÁ
+void EXTI3_IRQHandler() {
+	if(exti_interrupt_flag_get(USER2_KEY_EXTI_LINE) != RESET) {
+		gd_eval_led_on(LED3);
+			exti_interrupt_flag_clear(USER2_KEY_EXTI_LINE);
+	}
+}
 
+void EXTI4_IRQHandler() {
+	if(exti_interrupt_flag_get(USER3_KEY_EXTI_LINE) != RESET) {
+		gd_eval_led_off(LED3);
+			exti_interrupt_flag_clear(USER3_KEY_EXTI_LINE);
+	}
+}
 void flashLED2_8() {
 	gd_eval_led_on(LED2);
 	delay_1ms(50);
-	gd_eval_led_off(LED2);
-	delay_1ms(100);
 	gd_eval_led_on(LED3);
 	delay_1ms(50);
-	gd_eval_led_off(LED3);
-	delay_1ms(100);
 	gd_eval_led_on(LED4);
 	delay_1ms(50);
-	gd_eval_led_off(LED4);
-	delay_1ms(100);
 	gd_eval_led_on(LED5);
 	delay_1ms(50);
-	gd_eval_led_off(LED5);
-	delay_1ms(100);
 	gd_eval_led_on(LED6);
 	delay_1ms(50);
-	gd_eval_led_off(LED6);
-	delay_1ms(100);
 	gd_eval_led_on(LED7);
 	delay_1ms(50);
-	gd_eval_led_off(LED7);
-	delay_1ms(100);
 	gd_eval_led_on(LED8);
 	delay_1ms(50);
+	gd_eval_led_off(LED2);
+	delay_1ms(50);
+	gd_eval_led_off(LED3);
+	delay_1ms(50);
+	gd_eval_led_off(LED4);
+	delay_1ms(50);
+	gd_eval_led_off(LED5);
+	delay_1ms(50);
+	gd_eval_led_off(LED6);
+	delay_1ms(50);
+	gd_eval_led_off(LED7);
+	delay_1ms(50);
 	gd_eval_led_off(LED8);
-	delay_1ms(100);
+	delay_1ms(50);
 }
 
 void resetLightKeyCnt() {
