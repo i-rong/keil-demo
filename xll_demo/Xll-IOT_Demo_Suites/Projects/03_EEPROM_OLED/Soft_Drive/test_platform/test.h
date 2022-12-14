@@ -3,7 +3,7 @@
 
 #include "gd32f4xx.h"
 
-#define EEPROAM_FIRST_PAGE           0x00						//EEPROM起始地址
+#define EEPROM_FIRST_PAGE           0x00						//EEPROM起始地址
 
 void systemInit();
 void test1();

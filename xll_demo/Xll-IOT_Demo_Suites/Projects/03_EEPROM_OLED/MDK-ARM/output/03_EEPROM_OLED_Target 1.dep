@@ -40,8 +40,8 @@ I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd3
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x5844D89A)
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x5844D89A)
 I (..\USER\systick.h)(0x5844D89A)
-F (..\USER\main.c)(0x638222BA)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
-I (..\Soft_Drive\test_platform\test.h)(0x63822259)
+F (..\USER\main.c)(0x6389B493)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\main.o --omf_browse .\output\main.crf --depend .\output\main.d)
+I (..\Soft_Drive\test_platform\test.h)(0x6387229D)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x5FA4F7CE)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\core_cm4.h)(0x58071FF0)
 I (C:\Keil_518\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
@@ -1374,7 +1374,7 @@ I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd3
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_usart.h)(0x60520EE2)
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_wwdgt.h)(0x5844D89A)
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x5844D89A)
-I (..\Soft_Drive\OLED\oledfont.h)(0x6381EC28)
+I (..\Soft_Drive\OLED\oledfont.h)(0x63822556)
 I (..\USER\systick.h)(0x5844D89A)
 F (..\Soft_Drive\EEPROM\at24cxx.c)(0x5F9AC82E)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\at24cxx.o --omf_browse .\output\at24cxx.crf --depend .\output\at24cxx.d)
 I (..\Soft_Drive\EEPROM\at24cxx.h)(0x5ED6136A)
@@ -1418,7 +1418,7 @@ I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd3
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x5844D89A)
 I (..\Soft_Drive\EEPROM\i2c.h)(0x5EECD25A)
 I (C:\Keil_518\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-F (..\Soft_Drive\EEPROM\i2c.c)(0x5F9AC8B0)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\i2c.o --omf_browse .\output\i2c.crf --depend .\output\i2c.d)
+F (..\Soft_Drive\EEPROM\i2c.c)(0x6387229C)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\i2c.o --omf_browse .\output\i2c.crf --depend .\output\i2c.d)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x5FA4F7CE)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\core_cm4.h)(0x58071FF0)
 I (C:\Keil_518\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
@@ -1459,7 +1459,7 @@ I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd3
 I (..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include\gd32f4xx_misc.h)(0x5844D89A)
 I (..\Soft_Drive\EEPROM\i2c.h)(0x5EECD25A)
 I (C:\Keil_518\ARM\ARMCC\include\stdio.h)(0x569DEA3A)
-F (..\Soft_Drive\test_platform\test.c)(0x6382229E)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\test.o --omf_browse .\output\test.crf --depend .\output\test.d)
+F (..\Soft_Drive\test_platform\test.c)(0x63872299)(-c --cpu Cortex-M4.fp -D__EVAL -D__MICROLIB -g -O0 --apcs=interwork --split_sections -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include -I ..\..\..\..\GD32F4x_Firmware_Library\GD32F4xx_standard_peripheral\Include -I ..\USER -I ..\..\..\Utilities -I ..\Soft_Drive\EEPROM -I ..\Soft_Drive\OLED -I ..\Soft_Drive\test_platform -I ..\..\..\..\GD32F4x_Firmware_Library\CMSIS-I C:\keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\03_EEPROM_OLED\MDK-ARM\RTE-I C:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4XX\Include-I C:\Keil_518\ARM\CMSIS\Include-D__UVISION_VERSION="518" -DGD32F407-o .\output\test.o --omf_browse .\output\test.crf --depend .\output\test.d)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4xx\Include\gd32f4xx.h)(0x5FA4F7CE)
 I (..\..\..\..\GD32F4x_Firmware_Library\CMSIS\core_cm4.h)(0x58071FF0)
 I (C:\Keil_518\ARM\ARMCC\include\stdint.h)(0x569DEA3A)
@@ -1504,6 +1504,6 @@ I (..\Soft_Drive\OLED\oled.h)(0x5F9AC748)
 I (..\Soft_Drive\EEPROM\at24cxx.h)(0x5ED6136A)
 I (..\Soft_Drive\EEPROM\i2c.h)(0x5EECD25A)
 I (..\Soft_Drive\OLED\bmp.h)(0x5EFF1FF4)
-I (..\Soft_Drive\test_platform\test.h)(0x63822259)
+I (..\Soft_Drive\test_platform\test.h)(0x6387229D)
 I (..\USER\systick.h)(0x5844D89A)
 F (..\Doc\Readme.txt)(0x5EC50708)()

@@ -12,9 +12,6 @@
 #include "cJSON.h"
 #include "gd32f4xx_XII-IOT.h"
 
-
-
-
 typedef uint32_t  u32;
 typedef uint16_t u16;
 typedef uint8_t  u8;
