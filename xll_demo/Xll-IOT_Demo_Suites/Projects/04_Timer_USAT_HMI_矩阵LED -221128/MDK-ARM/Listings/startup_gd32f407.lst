@@ -645,16 +645,16 @@ Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
 erwork --depend=.\output\startup_gd32f407.d -o.\output\startup_gd32f407.o -I"C:
 \keil_demo\xll_demo\Xll-IOT_Demo_Suites\Projects\04_Timer_USAT_HMI_æÿ’ÛLED -221
 128\MDK-ARM\RTE" -IC:\Keil_518\ARM\PACK\GigaDevice\GD32F4xx_DFP\3.0.0\Device\F4
-XX\Include -IC:\Keil_518\ARM\CMSIS\Include --predefine="__EVAL SETA 1" --predef
-ine="__MICROLIB SETA 1" --predefine="__UVISION_VERSION SETA 518" --predefine="G
-D32F407 SETA 1" --list=.\listings\startup_gd32f407.lst ..\..\..\..\GD32F4x_Firm
+XX\Include -IC:\Keil_518\ARM\CMSIS\Include --predefine="__MICROLIB SETA 1" --pr
+edefine="__UVISION_VERSION SETA 518" --predefine="GD32F407 SETA 1" --list=.\lis
+tings\startup_gd32f407.lst ..\..\..\..\GD32F4x_Firmware_Library\CMSIS\GD\GD32F4
 
 
 
 ARM Macro Assembler    Page 11 
 
 
-ware_Library\CMSIS\GD\GD32F4xx\Source\ARM\startup_gd32f407.s
+xx\Source\ARM\startup_gd32f407.s
 
 
 
@@ -2066,4 +2066,4 @@ x\Source\ARM\startup_gd32f407.s
 x\Source\ARM\startup_gd32f407.s
 Comment: __main used once
 2 symbols
-445 symbols in table
+444 symbols in table

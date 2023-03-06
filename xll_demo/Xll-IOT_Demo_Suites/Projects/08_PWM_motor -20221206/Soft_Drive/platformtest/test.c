@@ -110,40 +110,40 @@ void motor_zhez(uint8_t speed) {
 //进阶 按键控制电机转速、转向
 void test2() {
 	uint16_t i;
-	if(gpio_input_bit_get(DIP4_GPIO_PORT, DIP4_PIN) == RESET) { // 拨码开关关闭
+	if(gpio_input_bit_get(DIP4_GPIO_PORT, DIP4_PIN) == RESET) { // 拨码开关关闭 设置电机的转速和方向
 		char str[4];
-		sprintf(str, "%d.00", motor_speed);
+		sprintf(str, "%d.00", motor_speed); // 将全局motor_speed转换为字符串
 		OLED_ShowString(0, 0, "speed:");
 		OLED_ShowString(64, 0, str);
 		
-		if(mode_select == forward) {
+		if(mode_select == forward) { // 如果是正转 OLED上显示Positive
 			OLED_ShowString(0, 2, "Positive  ");
 			for(i = 0; i < 15; i++) {
 				dir[i] = pos[i];
 			}
-		} else if(mode_select == reverse){
+		} else if(mode_select == reverse){ // 反转 显示Reverse
 			OLED_ShowString(0, 2, "Reverse   ");
 			for(i = 0; i < 15; i++) {
 				dir[i] = rev[i];
 			}
 		} else {
-			OLED_ShowString(0, 2, "Stop      ");
+			OLED_ShowString(0, 2, "Stop      "); // 停止 显示Stop
 			for(i = 0; i < 15; i++) {
 				dir[i] = sto[i];
 			}
 		}
 	} else if(gpio_input_bit_get(DIP4_GPIO_PORT, DIP4_PIN) == SET) { // 拨码开关开启
-		if(mode_select == forward) {
-			motor_fanz(motor_speed);
-		} else if(mode_select == reverse) {
+		if(mode_select == forward) { // 选择不同的模式运行
 			motor_zhez(motor_speed);
+		} else if(mode_select == reverse) {
+			motor_fanz(motor_speed);
 		} else if(mode_select == stop) {
 			motor_stop();
 		}
 	}
 }
 
-
+// 按下按键1，改变转速
 void EXTI2_IRQHandler(void) {
 	if(exti_interrupt_flag_get(USER1_KEY_EXTI_LINE)) {
 		if(motor_speed++ >= 10) {
@@ -152,7 +152,7 @@ void EXTI2_IRQHandler(void) {
 		exti_interrupt_flag_clear(USER1_KEY_EXTI_LINE);  // 清空标志
 	}
 }
-
+// 按下按键2，改变转动的方向
 void EXTI3_IRQHandler(void) {
 	if(exti_interrupt_flag_get(USER2_KEY_EXTI_LINE)) {
 		if(mode_select++ >= 2) {

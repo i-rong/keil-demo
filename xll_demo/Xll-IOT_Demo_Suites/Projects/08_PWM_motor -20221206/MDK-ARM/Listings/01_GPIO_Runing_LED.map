@@ -271,8 +271,8 @@ Section Cross References
     test.o(i.test2) refers to gd32f4xx_gpio.o(i.gpio_input_bit_get) for gpio_input_bit_get
     test.o(i.test2) refers to printfa.o(i.__0sprintf) for __2sprintf
     test.o(i.test2) refers to oled.o(i.OLED_ShowString) for OLED_ShowString
-    test.o(i.test2) refers to test.o(i.motor_fanz) for motor_fanz
     test.o(i.test2) refers to test.o(i.motor_zhez) for motor_zhez
+    test.o(i.test2) refers to test.o(i.motor_fanz) for motor_fanz
     test.o(i.test2) refers to pwm.o(i.motor_stop) for motor_stop
     test.o(i.test2) refers to test.o(.data) for motor_speed
     oled.o(i.OLED_Clear) refers to oled.o(i.OLED_Write_Cmd) for OLED_Write_Cmd
