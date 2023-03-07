@@ -55,3 +55,4 @@
 .\output\test.o: ..\Soft_Drive\I2C\I2C.h
 .\output\test.o: ..\Soft_Drive\OLED\oled.h
 .\output\test.o: ..\Soft_Drive\74HC595\74HC595_LED.h
+.\output\test.o: ..\Soft_Drive\pwm\pwm.h
